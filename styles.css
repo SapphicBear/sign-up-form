@@ -135,8 +135,9 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    flex: 0 0 200px;
-    max-width: 700px;
+    flex: 0 0 auto;
+    max-width: 520px;
+    outline: 2px red solid;
     gap: 1.2em;
 }
 form h3 {
