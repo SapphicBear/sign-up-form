@@ -136,7 +136,7 @@ form {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 1.2em;
-    max-width: 40vw;
+    max-width: 600px;
 }
 form h3 {
     margin-bottom: 1em;
