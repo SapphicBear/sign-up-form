@@ -13,6 +13,7 @@
             <img src="./imgs/odin-lined.png" alt="Logo of the odin project, a outline of odin's head.">
             <h1>ODIN</h1>
         </div>
+        <p>Image by <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a></p>
     </div>
     
     <div class="half-page">
@@ -32,12 +33,12 @@
         
         <div class="sign-up-row">
             <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="user_first_name">
+            <input type="text" id="first_name" name="user_first_name" pattern="[a-zA-Z]*">
         </div>
 
         <div class="sign-up-row">
             <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="user_last_name">
+            <input type="text" id="last_name" name="user_last_name" pattern="[a-zA-Z]*">
         </div>
 
         <div class="sign-up-row">  
@@ -47,17 +48,17 @@
 
         <div class="sign-up-row">
             <label for="phone">Phone Number</label>
-            <input type="tel" name="user_phone_number" id="phone">
+            <input type="tel" name="user_phone_number" id="phone" pattern="[1-10]">
         </div>
 
         <div class="sign-up-row">
-            <label for="pwd">Password</label>
-            <input type="password" name="user_password" id="pwd">
+            <label for="pwd">Password</label><span class="pwd"></span>
+            <input type="password" name="user_password" id="pwd" required>
         </div>
 
         <div class="sign-up-row">
-            <label for="confirm-pwd">Confirm Password</label>
-            <input type="password" name="user_password_confirm" id="confirm-pwd">
+            <label for="confirm-pwd">Confirm Password</label> <span class="pwd"></span>
+            <input type="password" name="user_password_confirm" id="confirm-pwd" required>
         </div>
     </form>
     </div>

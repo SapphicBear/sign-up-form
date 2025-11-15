@@ -11,6 +11,14 @@
     font-size: 100%;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
+
+    --pink: #fff6f2;
+    --pink-accent: #fffcfd;
+    --blue: #bcdbdb;
+    --blue-accent: #b0c5c3;
+    --red: rgb(245, 184, 184);
+    --black: rgb(23, 19, 43);
+    --dark-pink: rgb(51, 37, 47);
 }
 button, 
 input,
@@ -19,6 +27,10 @@ label {
     font-size: 100%;
     padding: 0;
     margin: 0;
+}
+
+input:focus {
+    outline:none;
 }
 
 h1, h2, h3, h4, body {
@@ -41,23 +53,39 @@ form {
 }
 
 body {
-    background: rgb(254, 244, 255);
+    background: rgb(243, 245, 247);
     align-items: stretch;
     height: 150vh;
 }
 
 .side-image-area {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     min-width: 40vw;
-    background: rgb(139, 166, 255);
+    background: url(./imgs/pawel-czerwinski-NhQSPqzklPU-unsplash.jpg) scroll;
+    background-size: 1400px;
 }
+
+.side-image-area p {
+    align-self: center;
+    color: rgba(49, 39, 56, 0.678);
+}
+
+a[href*="unsplash"]:link {
+    color: rgb(159, 204, 255);
+}
+
+a[href*="unsplash"]:visited {
+    color: rgb(73, 116, 151);
+}
+
 header,
 .form-container {
     padding-left: 3em;
 }
 header {
     font-size: 15px;
+    color: var(--black);
     margin-top: 10rem;
     padding-right: 1em;
     margin-bottom: 2rem;
@@ -91,12 +119,16 @@ header {
 
 .form-container {
     flex-direction: column;
-    background: white;
+    background: rgb(245, 240, 242);
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     box-shadow: black 2px 2px 10px;
     max-height: auto;
     gap: 1em;
+}
+
+.form-container h3 {
+    color: var(--dark-pink);
 }
 
 form {
@@ -116,7 +148,7 @@ form h3 {
 }
 
 .sign-up-row label {
-    color: grey;
+    color: rgb(110, 102, 109);
     font-weight:700;
 }
 
@@ -124,9 +156,33 @@ form h3 {
     display: block;
     height: 2em;
     padding-left: 0.3em;
-    border: grey 1px solid;
+    border: none;
+    outline: var(--blue-accent) 1px solid;
     border-radius: 5px;
+    background: var(--pink-accent);
 }
+
+input:focus {
+    outline: var(--blue) 2px solid;
+    background-color: white;
+    box-shadow: 2px 2px 3px rgb(151, 67, 109);
+}
+
+input:invalid {
+    outline: rgba(252, 82, 82, 0.719) 1.5px dashed;
+}
+
+input:invalid:focus {
+    outline: rgba(255, 80, 80, 0.637) 2px solid;
+}
+
+.pwd::after {
+    content: " * (required)";
+    font-family: inherit;
+    font-size:14px;
+    color: rgb(110, 102, 109);
+}
+
 .footer {
     margin-left: 3em;
 }
@@ -136,25 +192,29 @@ button {
     padding: 1em;
     width: 14rem;
     border-radius: 5px;
-    background: rgb(205, 122, 226);
-    color: white;
+    background: rgb(245, 159, 209);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px var(--dark-pink);
     font-weight: 700;
     margin-bottom: 0.75em;
     box-shadow: rgb(86, 50, 128) 2px 2px 4px;
 }
 
 button:hover {
-    background: rgb(250, 61, 225);
+    background: rgb(248, 128, 208);
 }
 
 button:active {
     box-shadow: inset 0px 0px 10px rgb(130, 42, 156);
-    background: rgb(160, 63, 155);
+    background: rgb(199, 105, 133);
+}
+button:focus {
+    outline: 2px rgb(163, 65, 106) solid;
 }
 
 a:link {
-    color: rgb(205, 122, 226); 
+    color: rgb(253, 153, 211);
 }
 a:visited {
-    color: rgb(255, 72, 72);
+    color: rgb(199, 105, 133);
 }
